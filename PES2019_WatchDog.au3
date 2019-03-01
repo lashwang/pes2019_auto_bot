@@ -27,7 +27,7 @@ endfunc
 
 
 func on_watch_dog_timeout()
-    SetFuocusWindow()
+    SetFocusWindow()
     $path = ScreenCapture()
     send_email("PES2019 Watch Dog Timeout","Watch Dog Timeout",$g_log_path&";"&$path)
 endfunc

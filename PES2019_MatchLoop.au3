@@ -28,7 +28,7 @@ endfunc
 func on_match_end_loop()
     AdlibUnRegister("in_match_checking")
     AdlibRegister("after_match_checking",1000)
-    SetFuocusWindow()
+    SetFocusWindow()
     $path = ScreenCapture()
     send_email("PES2019 SIM Match REPORTED by AUTOSIM","PES2019 SIM Match REPORT",$g_log_path&";"&$path)
     reset_watch_dog()

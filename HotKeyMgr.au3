@@ -26,7 +26,7 @@ EndFunc
 
 
 Func PrintWindowSize(); alt+k
-    SetFuocusWindow()
+    SetFocusWindow()
 	Local $aPos = WinGetPos($g_RPLAY_WIN_TITLE)
 	_log4a_Info("screen_width="&@DeskTopWidth&",screen_hight="&@DeskTopHeight)
 	_log4a_Info("win pos:x="&$aPos[0]&",y="&$aPos[1]&",w="&$aPos[2]&",h="&$aPos[3])
@@ -45,7 +45,7 @@ EndFunc
 
 Func ScreenCapture($pic_suffix = "jpg")
 	_log4a_Info("ScreenCapture")
-    SetFuocusWindow()
+    SetFocusWindow()
     WinActivate($g_RPLAY_WIN_TITLE)
     $hwnd = WinWaitActive($g_RPLAY_WIN_TITLE,"",120)
 	Local $hBitmap = _ScreenCapture_CaptureWnd("", $hwnd)
@@ -58,7 +58,7 @@ EndFunc
 
 Func SetWindowPos()
     _log4a_Info("SetWindowPos")
-    SetFuocusWindow()
+    SetFocusWindow()
 	WinMove($g_RPLAY_WIN_TITLE,"",$g_WindowPosX,$g_WindowPosY,$g_WindowWidth,$g_WindowHight)
 EndFunc
 

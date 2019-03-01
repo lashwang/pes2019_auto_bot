@@ -50,7 +50,7 @@ global $g_scouts_loop_state
 
 
 if @ScriptName == "PES2019_ScoutsSold.au3" then
-    SetFuocusWindow()
+    SetFocusWindow()
 	start_scouts_sold_main_loop()
     ;GetTopTabIndex()
     ;GetMidTabIndex()
@@ -284,7 +284,7 @@ func check_scout_request_highted()
     if not $bfound then
         return false
     endif
-    
+
     local $rect = CreateRectEx($SCOUTS_CONFIRM_X,$SCOUTS_CONFIRM_Y,$SCOUTS_CONFIRM_W,$SCOUTS_CONFIRM_H)
     Local $aCoord = PixelSearch($rect[0],$rect[1],$rect[2],$rect[3],$SCOUTS_CONFIRM_UNHIGHT_COLOR,$IMAGE_SEARCH_SV)
     If @error then

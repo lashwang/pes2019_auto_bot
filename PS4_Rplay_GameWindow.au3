@@ -56,7 +56,7 @@ Func _PS4_GameWindow_StartUp()
 
     Sleep(10*1000)
     $g_rplay_started = True
-    SetFuocusWindow()
+    SetFocusWindow()
     $g_hwnd_rplay = WinWaitActive($g_RPLAY_WIN_TITLE,"",120)
     WinMove($g_RPLAY_WIN_TITLE,"",$g_WindowPosX,$g_WindowPosY,$g_WindowWidth,$g_WindowHight)
     _log4a_Info("PS4 Game Window Start compelete,hwnd="&$g_hwnd_rplay)
@@ -104,7 +104,7 @@ Func PS4MacroWindowStart()
 EndFunc
 
 
-Func SetFuocusWindow()
+Func SetFocusWindow()
     WinActivate($g_RPLAY_WIN_TITLE)
     Sleep(200)
     CheckInvalidWindow()
@@ -125,7 +125,7 @@ EndFunc
 
 Func GetPS4RemoteWindowHandler()
     Local $hwnd
-    SetFuocusWindow()
+    SetFocusWindow()
     $hwnd = WinWaitActive($g_RPLAY_WIN_TITLE,"",120)
 
     return $hwnd

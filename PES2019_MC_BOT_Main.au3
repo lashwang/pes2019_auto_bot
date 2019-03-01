@@ -18,7 +18,7 @@ _log4a_Info("Start to play games")
 
 
 While(1)
-    SetFuocusWindow()
+    SetFocusWindow()
     Sleep(5000)
     back_to_top_menu()
     move_to_squad_menu()
